@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "c/c++: g++ build and debug active file",
+            "request": "launch",
+            "type": "cppvsdbg",
+            "cwd": "${workspaceFolder}/bazel-out/x64_windows-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe.runfiles/",
+            "program": "${workspaceFolder}/bazel-out/x64_windows-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
+            "windows": {
+                "type": "cppvsdbg",
+                "cwd": "${workspaceFolder}/bazel-out/x64_windows-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe.runfiles/",
+                "program": "${workspaceFolder}/bazel-out/x64_windows-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
+            },
+            "osx": {
+                "type": "cppdbg",
+                "MIMode": "lldb",
+                "program": "${workspaceFolder}/bazel-out/darwin-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}",
+                "cwd": "${workspaceFolder}/bazel-out/darwin-dbg/bin/",
+            },
+            "linux": {
+                "type": "cppdbg",
+                "MIMode": "gdb",
+                "program": "${workspaceFolder}/bazel-out/local_linux-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
+                "cwd": "${workspaceFolder}/bazel-out/local_linux-dbg/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe.runfiles/",
+            },
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "console": "integratedTerminal",
+            //"externalConsole": false,
+            //"MIMode": "gdb",
+            //"miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe", // gdb path
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "BazelBuild"
+        }
+    ]
+}

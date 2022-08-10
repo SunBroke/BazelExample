@@ -13,6 +13,6 @@ cc_binary(
     deps = [
         ":hello-greet",
         "//lib:hello-time",
-        "@gtest//:main"
+        "@com_google_googletest//:gtest_main",
     ],
 )
